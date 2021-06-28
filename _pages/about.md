@@ -1,7 +1,7 @@
 ---
 permalink: /about/
-title: "About"
-excerpt: "Minimal Mistakes is a flexible two-column Jekyll theme."
+title: "About me"
+excerpt: "Welcome to my personal blog"
 layouts_gallery:
   - # url: /assets/images/mm-layout-splash.png
     image_path: /assets/images/mm-layout-splash.png
@@ -12,18 +12,22 @@ layouts_gallery:
   - # url: /assets/images/mm-layout-archive.png
     image_path: /assets/images/mm-layout-archive.png
     alt: "archive layout example"
-last_modified_at: 2021-05-11T10:23:16-04:00
+# last_modified_at: 2021-05-11T10:23:16-04:00
 toc: true
 ---
 
-## Notable Features
+## WELCOME TO MY BLOG
 
-- Bundled as a "theme gem" for easier install/upgrading.
-- Compatible with GitHub Pages.
-- Support for Jekyll's built-in Sass/SCSS preprocessor.
+## General Information
+- My name is Tien Thanh, a Software Engineer student
+- I'm studying at Ho Chi Minh City University of Science - VNU. 
+- I'm interested in software development, computer science, competitive programming, US/UK music, ... 
 
+## Purpose of this blog
+- 💻 I hope to sharing a little of my knowledge for everybody who interesting in programming.
+- 🎧 Where I'm tell about my life as a programmer and morever. 
+- 😃 And ... I need a place to write and share my feeling (just for myself) 
 
-## Demo Pages
 ---
 
-Minimal Mistakes is designed, developed, and maintained by Michael Rose. Just another boring, tattooed, designer from Buffalo New York.
+♥️ Enjoy! ♥️

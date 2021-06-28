@@ -96,7 +96,7 @@ analytics:
 author:
   name             : "Nguyễn Đăng Tiến Thành"
   avatar           : "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I'm a *Software Engineer* Student at VNU-HCMUS"
+  bio              : "I'm a **Software Engineer** Student at VNU-HCMUS"
   location         : "Viet Nam"
   # email            : "ndtthanh214@gmail.com"
   links:
