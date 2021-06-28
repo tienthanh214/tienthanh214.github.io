@@ -16,8 +16,8 @@ minimal_mistakes_skin    : "dark" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "vi-VN"
-title                    : "Tien Thanh"
-title_separator          : "|"
+title                    : "Tien Thanh | My Personal Blog"
+title_separator          : "-"
 subtitle                 : "My Personal Blog" # site tagline that appears below site title in masthead
 name                     : "Nguyễn Đăng Tiến Thành"
 description              : "Blog about Knowledge sharing in programming and My personal life as a programmer"
@@ -96,9 +96,9 @@ analytics:
 author:
   name             : "Nguyễn Đăng Tiến Thành"
   avatar           : "/assets/images/bio-photo.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I'm a Software Engineer Student at VNU-HCMUS"
+  bio              : "I'm a *Software Engineer* Student at VNU-HCMUS"
   location         : "Viet Nam"
-  email            : "ndtthanh214@gmail.com"
+  # email            : "ndtthanh214@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
