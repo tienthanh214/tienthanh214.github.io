@@ -42,10 +42,10 @@ gallery:
     alt: "placeholder image 3"
     title: "cute ghê"
   - url: /assets/images/gallery/hauhau3.jpg
-    image_path: https://scontent.fdad2-1.fna.fbcdn.net/v/t1.15752-9/203567183_313669743730659_4243071505004804651_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=ae9488&_nc_ohc=wREgbEy8kaIAX-OiuMZ&_nc_ht=scontent.fdad2-1.fna&oh=d4cc953e4162204a793b7ccf492dd789&oe=60DDCCF7
+    image_path: https://scontent.fdad2-1.fna.fbcdn.net/v/t1.15752-9/203567183_313669743730659_4243071505004804651_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=ae9488&_nc_ohc=wREgbEy8kaIAX85pyl0&_nc_ht=scontent.fdad2-1.fna&oh=b2cb13fcf8ac44b0be34a36c60833b6f&oe=60E1F9B7
     alt: "placeholder image 4"
     title: "Image 4 title caption"
-  - url: /assets/images/gallery/hauhau5.jpg
+  - url: /assets/images/gallery/hauhau3.jpg
     image_path: https://scontent.fdad2-1.fna.fbcdn.net/v/t1.15752-9/204833310_273711597844356_5631620583192032642_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=ae9488&_nc_ohc=bkzbcFzCMKUAX_znFlc&_nc_ht=scontent.fdad2-1.fna&oh=a6b434dfe61cd0d765f3ce194e5c19d2&oe=60E233A0
     alt: "placeholder image 5"
     title: "Image 5 title caption"
