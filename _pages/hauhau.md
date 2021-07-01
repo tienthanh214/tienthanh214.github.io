@@ -41,7 +41,7 @@ gallery:
     image_path: https://scontent.fdad2-1.fna.fbcdn.net/v/t1.15752-9/210123425_916072598972319_6056251191712058222_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=ae9488&_nc_ohc=mehcVudrDn4AX85j-az&_nc_ht=scontent.fdad2-1.fna&oh=10ce15825ff88a7643ac2e8b69943b1e&oe=60E1E535
     alt: "placeholder image 3"
     title: "cute ghê"
-  - url: /assets/images/hauhau4.jpg
+  - url: /assets/images/gallery/hauhau3.jpg
     image_path: https://scontent.fdad2-1.fna.fbcdn.net/v/t1.15752-9/203567183_313669743730659_4243071505004804651_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=ae9488&_nc_ohc=wREgbEy8kaIAX-OiuMZ&_nc_ht=scontent.fdad2-1.fna&oh=d4cc953e4162204a793b7ccf492dd789&oe=60DDCCF7
     alt: "placeholder image 4"
     title: "Image 4 title caption"
