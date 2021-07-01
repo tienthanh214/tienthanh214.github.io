@@ -83,8 +83,8 @@ gallery3:
     title: "meow"
   
 gallery_together:
-  - url: /assets/images/gallery/hh-first.JPG
-    image_path: /assets/images/gallery/hh-first.JPG
+  - url: /assets/images/gallery/hh-first.jpg
+    image_path: /assets/images/gallery/hh-first.jpg
     alt: "Vườn kem Đà Lạt"
     title: "Tấm ảnh đầu tiên chụp chung"
   - url: /assets/images/gallery/hh-vong.jpg
