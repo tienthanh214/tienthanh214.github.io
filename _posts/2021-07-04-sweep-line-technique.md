@@ -18,10 +18,7 @@ toc: true
 
 ## Độ dài đoạn phủ
 ### Bài toán:
-Cho *N* đoạn thẳng trên trục Ox, mỗi đoạn được biểu diễn bởi hai điểm đầu và cuối $$[a_i, b_i]$$ 
-
-
-$$ equation $$
+Cho *N* đoạn thẳng trên trục Ox, mỗi đoạn được biểu diễn bởi hai điểm đầu và cuối $$[a_i, b_i]$$  $$(a_i \le b_i) $$ 
 
 ### Lời giải
 Đây là một trong những bài kinh điển và cơ bản nhất có thể sử dụng kỹ thuật Sweepline để giải một cách gọn gàng.
@@ -72,3 +69,6 @@ Về bản chất thì bài toán này giống với bài toán độ dài đo�
 # Luyện tập
 
 # Nguồn tham khảo
+
+
+
