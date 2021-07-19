@@ -169,22 +169,68 @@ bool compare(const query &A, const query &B) {
 ```
 
 ## Độ phức tạp
+
+
 Có 2 trường hợp xả ra:
-1. Truy vấn $l_i$ $r_i$ chung block với truy vấn $l_{i-1}$ $r_{i - 1}$. Định nghĩa hai truy vấn chung block khi chỉ số block của $l$ bằng nhau.
+1. Hai truy vấn chung block
 
-* Vì khi hai truy vấn chung block thì ta đã sắp xếp tăng dần theo $r$, nên con trỏ $r$ chỉ di chuyển tăng dần về phía bên phải, nên khi giải tất cả các truy vấn trong cùng block $l$ thì $r$ chỉ di chuyển tối đa $N$ lần nên có độ phức tạp tổng là $O(N)$
+    * Truy vấn $l_i$ $r_i$ chung block với truy vấn $l_{i-1}$ $r_{i - 1}$. Định nghĩa hai truy vấn chung block khi chỉ số block của $l$ bằng nhau.
 
-* Còn con trỏ $l$ sẽ di chuyển chỉ trong block mà nó thuộc về, một block có độ dài $\sqrt{N}$ nên mỗi truy vấn mới $l$ sẽ di chuyển tối đa $\sqrt{N}$ lần.
+    * Vì khi hai truy vấn chung block thì ta đã sắp xếp tăng dần theo $r$, nên con trỏ $r$ chỉ di chuyển tăng dần về phía bên phải, nên khi giải tất cả các truy vấn trong cùng block $l$ thì $r$ chỉ di chuyển tối đa $N$ lần nên có độ phức tạp tổng là $O(N)$
 
--> Độ phức tạp: $O(\sqrt{N} * N)$
+    * Còn con trỏ $l$ sẽ di chuyển chỉ trong block mà nó thuộc về, một block có độ dài $\sqrt{N}$ nên mỗi truy vấn mới $l$ sẽ di chuyển tối đa $\sqrt{N}$ lần, có tối đa $Q$ truy vấn nên độ phức tạp sẽ là $O(\sqrt{N} * Q)$
+
+    -> Độ phức tạp: $O(\sqrt{N} * Q + N)$
 
 2. Hai truy vấn khác block
-* 
+
+    * Khi từ block này sang block khác, chỉ số $r$ có thể sẽ di chuyển ở vị trí bất kì (vì điều kiện sắp xếp truy vấn) nên để chi chuyển $r$ có độ phức tạp là $O(N)$
+
+    * Chỉ số $l$ sẽ chi chuyển tăng dần qua block khác, có tất cả $\sqrt{N}$ block nên độ phức tạp tối đa là $O(\sqrt{N})$
+    
+    Như vậy mỗi lần chuyển block sẽ có độ phức tạp $O(N)$ và có tối đa $\sqrt{N}$ lần như vậy nên độ phức tạp tổng là $O(\sqrt{N} * N)$
+    
+    -> Độ phức tạp: $O(\sqrt{N} * N)$
+
+**Độ phức tạp:** $O((N + Q) * \sqrt{N})$
+
+Ngoài ra độ phức tạp còn tùy thuộc vào hàm *add* hay *remove*
+
 
 
 ## Cài đặt
+Dưới đây là full code cài đặt Mo's algorithm đã AC bài [DQUERY][dquery].
 
 ```c++
+#include <stdio.h>
+#include <algorithm>
+#include <unordered_map>
+
+using namespace std;
+
+const int MAXN = 3e4 + 10;
+const int MAXQ = 2e5 + 10;
+const int BLOCK = 175; // ~sqrt(MAXN)
+
+struct query {
+    int l, r, id;
+    query(int _l = 0, int _r = 0, int _id = 0):
+        l(_l), r(_r), id(_id) {};
+};
+
+int n, Q;
+int a[MAXN];
+int res[MAXQ];
+query q[MAXQ];
+int answer = 0;
+unordered_map<int, int> cnt;
+
+bool compare(const query &A, const query &B) {
+    if (A.l / BLOCK != B.l / BLOCK)
+        return A.l / BLOCK < B.l / BLOCK;
+    return A.r < B.r;
+}
+
 void Add(int pos) {
     cnt[a[pos]]++;
     if (cnt[a[pos]] == 1) answer++;
@@ -197,7 +243,6 @@ void Remove(int pos) {
 
 void solve() {
     int curL = 1, curR = 0;
-    memset(cnt, 0, sizeof(cnt));
     sort(q + 1, q + 1 + Q, compare);
     for (int i = 1; i <= Q; ++i) {
         int L = q[i].l, R = q[i].r;
@@ -205,10 +250,41 @@ void solve() {
         while (curL > L) Add(--curL);
         while (curR < R) Add(++curR);
         while (curR > R) Remove(curR--);
-        res[q[i].i] = answer;
+        res[q[i].id] = answer;
     }
     for (int i = 1; i <= Q; ++i) 
-        printf("%I64d\n", res[i]);
+        printf("%d\n", res[i]);
 }
+
+void readInput() {
+    scanf("%d", &n);
+    for (int i = 1; i <= n; ++i)
+        scanf("%d", &a[i]);
+    scanf("%d", &Q);
+    for (int i = 1; i <= Q; ++i) {
+        scanf("%d%d", &q[i].l, &q[i].r);
+        q[i].id = i;
+    }
+}
+
+int main() {
+    readInput();
+    solve();
+    return 0;
+}
+
 ```
 > Có thể sử dụng template hàm **solve** và chỉ cần thay đổi hàm *Add* và *Remove* cho phù hợp với bài toán
+
+# Luyện tập
+Các bạn có thể luyện một số bài có thể dùng Mo's algorithm để giải ở đây:
+[Everything on Mo's Algorithm][problems]
+
+# Tham khảo
+1. [VNOI - Chia căn và ứng dụng][reference-vnoi]
+2. [Sqrt decomposition][reference-cp]
+
+[dquery]: https://www.spoj.com/problems/DQUERY/
+[problems]: https://codeforces.com/blog/entry/81716
+[reference-vnoi]: https://vnoi.info/wiki/algo/data-structures/mo-algorithm
+[reference-cp]: https://cp-algorithms.com/data_structures/sqrt_decomposition.html
