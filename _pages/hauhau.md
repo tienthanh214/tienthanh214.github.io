@@ -29,28 +29,28 @@ feature_row:
     alt: "journeys"
 
 gallery:
-  - url: /assets/images/gallery/hauhau1.jpg
-    image_path: https://scontent.fdad2-1.fna.fbcdn.net/v/t1.15752-9/206220329_217599150187423_7691423479280720176_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=ae9488&_nc_ohc=ov1l77aa33UAX_iDnmU&_nc_ht=scontent.fdad2-1.fna&oh=117b167254c78324dc555ac222a57320&oe=60E1F6D5
+  - url: /assets/images/gallery/hauhau2.jpg
+    image_path: /assets/images/gallery/hauhau2.jpg
     alt: "placeholder image 1"
     title: "pắn tym"
-  - url: /assets/images/gallery/hauhau2.jpg
-    image_path: https://scontent.fdad2-1.fna.fbcdn.net/v/t1.15752-9/209202544_316226183555373_7202377962860122033_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=ae9488&_nc_ohc=iAUDmn27ohgAX_8-xdT&tn=Wzk7Kex1oSTIvQ6v&_nc_ht=scontent.fdad2-1.fna&oh=bcc5427c76f2c2b37d8728e83e793caf&oe=60E2293B
+  - url: /assets/images/gallery/hauhau1.jpg
+    image_path: /assets/images/gallery/hauhau1.jpg
     alt: "placeholder image 2"
     title: "Image 2 title caption"
   - url: /assets/images/gallery/hauhau3.jpg
-    image_path: https://scontent.fdad2-1.fna.fbcdn.net/v/t1.15752-9/210123425_916072598972319_6056251191712058222_n.jpg?_nc_cat=105&ccb=1-3&_nc_sid=ae9488&_nc_ohc=mehcVudrDn4AX85j-az&_nc_ht=scontent.fdad2-1.fna&oh=10ce15825ff88a7643ac2e8b69943b1e&oe=60E1E535
+    image_path: /assets/images/gallery/hauhau3.jpg
     alt: "placeholder image 3"
     title: "cute ghê"
-  - url: /assets/images/gallery/hauhau3.jpg
-    image_path: https://scontent.fdad2-1.fna.fbcdn.net/v/t1.15752-9/203567183_313669743730659_4243071505004804651_n.jpg?_nc_cat=101&ccb=1-3&_nc_sid=ae9488&_nc_ohc=wREgbEy8kaIAX85pyl0&_nc_ht=scontent.fdad2-1.fna&oh=b2cb13fcf8ac44b0be34a36c60833b6f&oe=60E1F9B7
+  - url: /assets/images/gallery/hauhau5.jpg
+    image_path: /assets/images/gallery/hauhau5.jpg
     alt: "placeholder image 4"
     title: "Image 4 title caption"
-  - url: /assets/images/gallery/hauhau3.jpg
-    image_path: https://scontent.fdad2-1.fna.fbcdn.net/v/t1.15752-9/204833310_273711597844356_5631620583192032642_n.jpg?_nc_cat=109&ccb=1-3&_nc_sid=ae9488&_nc_ohc=bkzbcFzCMKUAX_znFlc&_nc_ht=scontent.fdad2-1.fna&oh=a6b434dfe61cd0d765f3ce194e5c19d2&oe=60E233A0
+  - url: /assets/images/gallery/hauhau4.jpg
+    image_path: /assets/images/gallery/hauhau4.jpg
     alt: "placeholder image 5"
     title: "Image 5 title caption"
   - url: /assets/images/gallery/hauhau6.jpg
-    image_path: https://scontent-hkt1-1.xx.fbcdn.net/v/t1.15752-9/203303958_508616050447135_4421188657143127384_n.jpg?_nc_cat=110&ccb=1-3&_nc_sid=ae9488&_nc_ohc=R5NnCCa6KAwAX9bOHl4&_nc_ht=scontent-hkt1-1.xx&oh=fcfbb36c87934aa39495789424f00ee1&oe=60E0909D
+    image_path: /assets/images/gallery/hauhau6.jpg
     alt: "placeholder image 6"
     title: "Image 6 title caption"
 
@@ -87,8 +87,8 @@ gallery_together:
     image_path: /assets/images/gallery/hh-first.jpg
     alt: "Vườn kem Đà Lạt"
     title: "Tấm ảnh đầu tiên chụp chung"
-  - url: /assets/images/gallery/hh-vong.jpg
-    image_path: https://scontent.fdad2-1.fna.fbcdn.net/v/t1.15752-9/204534512_250172049780737_2354389629952015489_n.png?_nc_cat=100&ccb=1-3&_nc_sid=ae9488&_nc_ohc=K3_bAzkWyasAX9mtitp&tn=Wzk7Kex1oSTIvQ6v&_nc_ht=scontent.fdad2-1.fna&oh=2509ef5f50371b877d4b5e9610acad8a&oe=60E29EA5
+  - url: /assets/images/gallery/hh-eyes.jpg
+    image_path: /assets/images/gallery/hh-eyes.png
     alt: "Eyes"
     title: "Này chụp ở nhà văn hóa SV nè"
   - url: /assets/images/gallery/hh-tt21.jpg
@@ -99,24 +99,24 @@ gallery_together:
     image_path: /assets/images/gallery/hh-vong.jpg
     alt: "Vòng tay"
     title: "Vòng tay đơn Sơn - Hải"
-  - url: /assets/images/gallery/hh-vong.jpg
-    image_path: https://scontent.fdad2-1.fna.fbcdn.net/v/t1.15752-9/205522121_1221314625050393_6115995793891082886_n.png?_nc_cat=105&ccb=1-3&_nc_sid=ae9488&_nc_ohc=-RJ32d4uRVIAX88cqjI&_nc_oc=AQnbFdpPLJcLesm6tMf8cDUB4UwUswzze0oVaDlD3_zd400NL2u58ZhTiQsFV5KFCEQ&_nc_ht=scontent.fdad2-1.fna&oh=54ce94e5aefac33825b7aacc2d92e9e3&oe=60E21E9F
+  - url: /assets/images/gallery/hh-kem.png
+    image_path: /assets/images/gallery/hh-kem.png
     alt: "Quán kem Quận nào đó"
     title: "Chụp trong quán kem nào đó quên ùi"
-  - url: https://scontent.fdad2-1.fna.fbcdn.net/v/t1.15752-9/204396363_1144173559414688_4045649532179642295_n.png?      _nc_cat=108&ccb=1-3&_nc_sid=ae9488&_nc_ohc=MDJzu2Hb7SgAX_Xwjut&_nc_ht=scontent.fdad2-1.fna&oh=ea9e840d09d86af21569d34241a28051&oe=60E29320
-    image_path: https://scontent.fdad2-1.fna.fbcdn.net/v/t1.15752-9/204396363_1144173559414688_4045649532179642295_n.png?_nc_cat=108&ccb=1-3&_nc_sid=ae9488&_nc_ohc=MDJzu2Hb7SgAX_Xwjut&_nc_ht=scontent.fdad2-1.fna&oh=ea9e840d09d86af21569d34241a28051&oe=60E29320
+  - url: /assets/images/gallery/hh-tay.png
+    image_path: /assets/images/gallery/hh-tay.png
     alt: "Tay đâu tay đâu"
     title: "Đưa tay đây nào"
-  - url: https://scontent.fdad2-1.fna.fbcdn.net/v/t1.15752-9/200692830_158570183004052_7949093055977271837_n.png?_nc_cat=106&ccb=1-3&_nc_sid=ae9488&_nc_ohc=6qYZ519V2hcAX_ihJII&_nc_ht=scontent.fdad2-1.fna&oh=b246e70ceef63a91de52ff7770e9ca27&oe=60E3B174
-    image_path: https://scontent.fdad2-1.fna.fbcdn.net/v/t1.15752-9/200692830_158570183004052_7949093055977271837_n.png?_nc_cat=106&ccb=1-3&_nc_sid=ae9488&_nc_ohc=6qYZ519V2hcAX_ihJII&_nc_ht=scontent.fdad2-1.fna&oh=b246e70ceef63a91de52ff7770e9ca27&oe=60E3B174
+  - url: /assets/images/gallery/hh-nuibaden.png
+    image_path: /assets/images/gallery/hh-nuibaden.png
     alt: "Đỉnh núi Bà Đen"
     title: "Đỉnh núi Bà Đen - Tây Ninh"
   - url: /assets/images/gallery/hh-cloud.jpg
     image_path: /assets/images/gallery/hh-cloud.jpg
     alt: "Săn mây"
     title: "Mọi người kêu ra chụp chung mới chịu nè"  
-  - url: https://scontent.fdad2-1.fna.fbcdn.net/v/t1.15752-9/200818793_317822796653438_7875754520244379975_n.png?_nc_cat=102&ccb=1-3&_nc_sid=ae9488&_nc_ohc=q9DKLvSt_woAX8s9AUS&tn=Wzk7Kex1oSTIvQ6v&_nc_ht=scontent.fdad2-1.fna&oh=95d7602b6ce562f6ce47f5c99e2e7650&oe=60E353F0
-    image_path: https://scontent.fdad2-1.fna.fbcdn.net/v/t1.15752-9/200818793_317822796653438_7875754520244379975_n.png?_nc_cat=102&ccb=1-3&_nc_sid=ae9488&_nc_ohc=q9DKLvSt_woAX8s9AUS&tn=Wzk7Kex1oSTIvQ6v&_nc_ht=scontent.fdad2-1.fna&oh=95d7602b6ce562f6ce47f5c99e2e7650&oe=60E353F0
+  - url: /assets/images/gallery/hh-midbaden.png
+    image_path: /assets/images/gallery/hh-midbaden.png
     alt: "Giữa núi Bà Đen"
     title: "Nghỉ giải lao chút trước khi leo núi tiếp :'("
 ---
@@ -152,8 +152,38 @@ Comming soon...
 ## [01-01-2021] Đón năm mới
 
 ## ❤️ 19-12-2020 ❤️
+Nahh, này là ngày cực kì quan trọng nè.
+
+Vài ngày sau tour Đà Lạt về, được bạn bè cổ vũ, tẩy não, dùng những lời có cánh dụ dỗ mình, mình quyết định lấy hết can đảm tỏ tình với bé *hau* (mặc dù ý đinh này của mình có từ khi ở Đà Lạt, nhưng điều đó không xảy ra được vì *hau* phải về sớm không thể tham gia buổi thịt nướng đêm cuối ở DaLat, nên là hỏng 😢).
+
+Mình đã chuẩn bị gì cho sự kiện căng thẳng này? Cũng không có gì, chủ yếu là tấm lòng chân thành, và một bình hạc giấy (hạc chứ k phải hạt nha bé hau) được mình xếp từng ngày kể từ hôm bị tóm cổ đi cách ly cho đến khi đi Đà Lạt, mỗi ngày một con thể hiện cho nỗi niềm từng ngày của mình. Hạc mình xếp thì chẳng có gì đặc biệt, không đẹp lại không có màu sắc, chỉ có một màu trắng từ đống giấy trong sổ tay trong khu cách ly, để xếp được đống này thì phải lên youtube nhiều :)), ngoài ra cũng được bé hau chỉ dạy vài chiêu nhưng tài thì có hạn không thể nào xếp đẹp như người ta được 😢. Nhưng mà mấy con hạc này phải gọi là có một không hai, quá nhiều sự đặc biệt trong từng con hạc, mà chỉ có 2 người có thể cảm nhận được thôi. Bên trong bình hạc giấy ở chính giữa là bức tâm thư thay lời nói cùng với lời hẹn.
+
+Tiếp tục câu chuyện ngày hôm ấy, lấy cớ backup ảnh từ iphone hau qua laptop mình, hai đứa hẹn nhau ở chiếc ghế đá hồ bán nguyện KTX. Một cách rất tự nhiên, việc backup ảnh thì cũng xong, giờ còn cái việc quan trọng nhất là đưa quà cho *hau* thì mình cứ run run chần chừ mãi, có thể vì đây là cảm giác lần đầu đi tỏ tình với người ta, cảm giác nó lạ lạ khó tả lắm. Đến lúc *hau* say bye chuẩn bị bước về thì mình mới hạ quyết tâm đưa quà cho *hau*. Cơ mà mình cũng chả đủ can đảm để đưa trực tiếp bình hạc cho *hau* và nói lời tỏ tình, nên mình đã cho nó vào một cái hộp và tặng hau một đống thứ nào là bình giữ nhiệt, nào là túi kéo, blabla, ... cái quan trọng nhất thì giấu hơi kĩ. Ban đầu *hau* từ chối liên tục không chịu nhận 😢 tí thì bể hết kế hoạch, nhưng may là sau một hồi thuyết phục hết sức đi vào lòng đất của mình thì bé *hau* cũng chịu nhận.
+
+Nhưng đời thì chẳng như phim nên đừng có mà mộng tưởng mọi chuyện như kế hoạch ước muốn 😃. Hôm đó *hau* về cất đống quà mình vòa một xó luôn, không thèm mở xem có gì bên trong luôn, quá là đau lòng luôn. Ồ, mà trong bức thư mình viết lời hẹn gì ấy nhỉ. À "hẹn cậu vào 9h tối mai, 11h không gặp thì mình sẽ về". Mà cậu không đọc là chết mình rồi 😢. 
+
+Đêm sau khi mình tặng quà cho *hau* thì trong người mình rất là nóng, không muốn suy nghĩ gì nhiều mình quyết định đi ngủ cho nhanh tới ngày mai. Và hôm sau cũng đến, trong đầu mình lúc mới tỉnh dậy lại đặt ra một đống câu hỏi liệu *hau* có đọc được bức thư đó chưa, lỡ chưa đọc thì sao. Lên facebook hỏi ý kiến bạn bè thì được bạn bè chỉ điểm thay vì im im thì phải vào hỏi trực diện con gái nhà người ta. Hic, vậy là mình lại can đảm inbox sau vài giờ liền suy nghĩ, lúc đó chắc tầm 9-10h trưa gì đó, cũng là lúc *hau* đang đi xe bus đến quận 5, *hau* thú nhận rằng chưa khui quà ra và giờ đang đi học nên phải chiều tối về mới về được 😢. Vậy là mình nói với hậu rằng "có một bí mật siêu to khủng long" ở trong đống quà đó. Cũng may nhờ ơn những người bạn quý báu mình mới dám inbox hỏi thông tin *hau* không thì mình xác định tạch rùi.  
+
+Ok, kế hoạch vẫn như cũ, thời gian thì lại trôi qua quá nhanh, nhắm mắt một cái là 9h tối rồi, gấp đống sách vở, tắt laptop, cất điện thoại, cùng với cái đầu quay cuồng với hàng ngàn câu hỏi chưa được giải đáp, mình mạnh dạn đi xuống nơi hẹn.
+
+1 tiếng trôi qua, 1 tiếng 30 phút trôi qua, 1 tiếng 45 phút trôi qua, ... mình ta với ta nơi đây ngắm nhìn sao trời gió lộng, có chút lạnh, có chút nóng, có chút lo, có chút buồn, có lúc chẳng biết gì, chỉ khoảng 15 phút nữa là 11h và bạn ấy vẫn chưa đến, "mình phải làm sao đây?", ... Lúc ấy trong đầu mình nghĩ đến trường hợp *hau* không đến, trong đầu mình tỷ lệ bị từ chối rất là cao. Gần 2 tiếng ngồi không, cảm giác dài vô tận. Nhưng mà trời không phụ lòng người, 11h kém 10 phút, *hau* đã xuất hiện từ từ tiến lại gần mình. Trong đầu mình bấy giờ kiểu: "rồi sao, tới từ chối đúng không". Cậu ấy ngồi xuống cạnh mình và hỏi: "t xuống đây là m hiểu rồi ha", hiểu gì 😢??? Lúc đó hiểu được gì đâu là từ chối hay đồng ý. Trong cuộc trò chuyện sau đó cũng chẳng có từ "từ chối" hay "đồng ý" gì cả, hai đứa nói về bản thân, về người kia, ... và dần dần hai đứa cũng tự hiểu rằng từ giây phút này đã thành một đôi mất rồi. Nghẹn ngào chẳng thể nói nên câu. Trước khi bị các chú bảo vệ chiếu đèn chơi đuổi bắt, hau đã hỏi một câu: "muốn hỏi gì không nè", sau hồi lâu run run không nói được, tôi đáp lại bằng một câu hỏi: "bây giờ, mình là gì của nhau?", "m muốn là gì?", "người yêu được không" ... 
+
+Kết thúc một ngày, một đêm chẳng bao giờ quên được, chỉ biết rằng từ giây phút đó, tôi đã không còn một mình, vì biết rằng ở bên cạnh luôn có một người con gái rất quan trọng để nghĩ về mọi nơi, mọi khi.
+
+Chính thức hai đứa trở thành một cặp.
+
 
 ## Chuyến đi Đà Lạt
+Trong khi mình đang chinh chiến với trận ICPC Asia Regional sau khi bị tóm cổ đi cách ly 1 tuần thì mấy đứa bạn của mình lại đang setup chuyến đi chơi Đà Lạt, chuyến đi chơi xa đầu tiên của nhóm, chuyến này thì mình k có tham gia sắp xếp lên kế hoạch gì cả :3 các bạn biểu "m cứ lo thi đi" :3. 
+
+Lúc đó thì *hau* đang ở nhà tránh dịch, ban đầu bé có ý định vô lại SaiGon từ sớm, nhưng mà bé đã quyết định cúp học ở lại chơi với (chúng) mình :3.
+
+Ngay sau khi thi liên tục 5 tiếng đến 1h chiều, 2h chiều mình sắp xếp bắt bus về gấp ktx để chuẩn bị đồ đạc chuẩn bị cho chuyến đi vào khoảng 9h tối cùng ngày. Khá là gấp gáp nhưng mà vẫn là ok, đồ đạc vẫn gọi là đầy đủ để chinh chiến, trừ việc k ngờ là khí hậu DaLat cũng lạnh dữ 😂 trong khi mình chẳng có áo ấm (sau đó thì *hau* cho mình mượn quả áo len siêu ấm áp tình ngừi). 
+
+Chủ yếu trong chuyến đi này mình có cơ hội gần *hau* nhiều hơn, nói chuyện nhiều hơn, hiểu nhau nhiều hơn một xíu qua những chuyến chạy xe máy chung, rồi là đi vườn kem, đi săn mây. Ở đây thì lần đầu tiên mình có được 1 tấm ảnh chung giữa 2 đứa một cách chính diện, chính thống 😂.
+
+![image-center](/assets/images/gallery/hh-first.jpg){: .align-center}
+
 
 ## Lần đầu đi chơi với nhau
 Trước khi vào câu chuyện này thì trước đó mình đã mạnh dạn add friend fb và rep chiếc story của hauhau, sau đó hai đứa nói chuyện vui vẻ rất hợp, dần dần có chút cảm giác thân quen hơn, chứ mình nhác lắm để rủ được người khác đi chơi (mà lại là con gái nữa) thì hai đứa phải thân thiết một chút chứ ai đời lại mới gặp có 1 2 lần, một lần có xíu trên lớp mà đã đòi rủ đi chơi rồi :<, hau cũng chính là người con gái đầu tiên mình chủ động rủ đi chơi riêng khi chỉ quen chưa đến 1 tháng.
