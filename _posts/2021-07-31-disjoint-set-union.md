@@ -62,7 +62,7 @@ void initialize(int n) {
 }
 
 int findRoot(int u) {
-    if (par[u] != u) return u; //found root
+    if (par[u] == u) return u; //found root
     return par[u] = findRoot(par[u]); //path compressed
 }
 
@@ -110,7 +110,7 @@ void union(int x, int y) {
 # Độ phức tạp
 Khi cài đặt DSU chỉ với *path compression* độ phức tạp trung bình sẽ là $O(log(n))$ trên mỗi thao tác (theo trang cp-algorithm)
 
-Khi cài DSU  với *path compression* và *union by size* độ phức tạp trung bình sẽ là $O(\alpha{n})$, với $\alpha(n)$ là *inverse Ackermann function*, mình không rõ về hàm này lắm nhưng chỉ biết nó tăng cực chậm, chỉ khoảng 4 với $n$ lớn tầm 600 chữ số. 
+Khi cài DSU  với *path compression* và *union by size* độ phức tạp trung bình sẽ là $O(\alpha(n))$, với $\alpha(n)$ là *inverse Ackermann function*, mình không rõ về hàm này lắm nhưng chỉ biết nó tăng cực chậm, chỉ khoảng 4 với $n$ lớn tầm 600 chữ số. 
 
 # Luyện tập
 
