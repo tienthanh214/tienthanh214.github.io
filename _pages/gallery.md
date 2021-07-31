@@ -38,16 +38,34 @@ feature_row:
     btn_class: "btn--primary"
     btn_label: "Xem thêm"  
 
+galleryQHH:
+  - url: /assets/images/gallery/qhh-1.jpg
+    image_path: /assets/images/gallery/qhh-1.jpg
+    alt: "placeholder image 1"
+    title: ""
+  - url: /assets/images/gallery/qhh-2.jpg
+    image_path: /assets/images/gallery/qhh-2.jpg
+    alt: "placeholder image 2"
+    title: ""
+  - url: /assets/images/gallery/qhh-3.jpg
+    image_path: /assets/images/gallery/qhh-3.jpg
+    alt: "placeholder image 3"
+    title: ""
+
 ---
 {% include feature_row %}
 
 
 
+## Quốc Học Huế - Trường cấp 3 của tôi
+Đi đâu thì cũng thấy trường cấp 3 của mình là đẹp nhất :>
+
+Nơi lưu giữ nhiều kỉ niệm thời học sinh, nơi mình cố gắng rất nhiều ...
+
+{% include gallery id="galleryQHH"%}
+
 
 ## *[29-06-2021]* Chuyên mục ảnh này được tạo trên blog
 Có thể coi đây như mạng xã hội chỉ dành cho riêng mình, muốn up gì thì up :'>
 {% include figure image_path="/assets/images/gallery/gallery_created.png" alt="this is a placeholder image" %}
-
-
-## General Information
 
