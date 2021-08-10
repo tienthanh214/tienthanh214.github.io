@@ -1,5 +1,5 @@
 ---
-title: "Autofill and Submit Google form"
+title: "Google form auto-filling and submitting"
 excerpt: "autofill and submit google form using requests in python"
 show_date: true
 tags:
@@ -12,7 +12,7 @@ toc: true
 [English here](https://github.com/tienthanh214/autofill-and-submit-ggform/blob/main/README.md)
 
 # Task
-Một ngày đẹp trời, có một người nào đó đưa cho bạn một cái Google form và yêu cầu mình điền vào đó mỗi ngày, hoặc có thể và hằng giờ để báo cáo một việc gì đó.
+Một ngày đẹp trời, có một người nào đó đưa cho bạn một cái Google form và yêu cầu mình điền vào đó mỗi ngày, hoặc có thể là hằng giờ để báo cáo một việc gì đó.
 
 Công việc lặp đi lặp lại này có vẻ nhàm chán, do đó mình nghĩ đến việc viết một script để làm việc này một cách tự động bằng **Python**
 
@@ -45,7 +45,7 @@ Sau khi biết được ```id``` và định dạng cho từng input-box
 Tạo một dictionary với ```key``` là id của từng input-box, cùng với đó là ```value``` chính là dữ liệu bạn cần nhập vào
 
 ```py
-def fill_form():
+def fill_form(): 
     name = 'Your name'
     date, hour = str(datetime.datetime.now()).split(' ')
     date = date.split('-')
