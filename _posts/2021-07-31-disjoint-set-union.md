@@ -42,7 +42,7 @@ Việc từ node x tìm đến root nhanh hay chậm phụ thuộc vào việc n
 ## Union
 Để hợp nhất hai cây A và B, cụ thể hơn là hợp nhất hai cây A (chứa node x) và cây B (chứa node y).
 
-Đơn giản chỉ cần $u \leftarrow findRoot(x)$ và $v \leftarrow findRoot(y)$ sau đó gán $par(u) \leftarrow v$ (hoặc gán cha của u bằng v đều đúng - nếu chưa bàn đến độ hiệu quả).
+Đơn giản chỉ cần $u \leftarrow findRoot(x)$ và $v \leftarrow findRoot(y)$ sau đó gán $par(u) \leftarrow v$ (hoặc gán cha của v bằng u đều đúng - nếu chưa bàn đến độ hiệu quả).
 
 Trường hợp $findRoot(x) = findRoot(y)$ thì hai phần tử $x$ và $y$ cùng thuộc 1 tập hợp.
 
@@ -111,6 +111,9 @@ void union(int x, int y) {
 Khi cài đặt DSU chỉ với *path compression* độ phức tạp trung bình sẽ là $O(log(n))$ trên mỗi thao tác (theo trang cp-algorithm)
 
 Khi cài DSU  với *path compression* và *union by size* độ phức tạp trung bình sẽ là $O(\alpha(n))$, với $\alpha(n)$ là *inverse Ackermann function*, mình không rõ về hàm này lắm nhưng chỉ biết nó tăng cực chậm, chỉ khoảng 4 với $n$ lớn tầm 600 chữ số. 
+
+![image-center](/assets/images/post/dsu_runtime.png){: .align-center}
+> Kiểm nghiệm thời gian chạy thực tế bằng ngôn ngữ C++ trên bộ dữ liệu sinh ngẫu nhiên. Có thể thấy với path-compression và union-by-size DSU chạy cực nhanh, trong khi chỉ với path-compression là đã đủ nhanh rồi :3.
 
 # Luyện tập
 

@@ -43,15 +43,44 @@ galleryQHH:
     image_path: /assets/images/gallery/qhh-1.jpg
     alt: "placeholder image 1"
     title: ""
-  - url: /assets/images/gallery/qhh-2.jpg
-    image_path: /assets/images/gallery/qhh-2.jpg
-    alt: "placeholder image 2"
-    title: ""
+  - url: /assets/images/gallery/qhh-5.jpg
+    image_path: /assets/images/gallery/qhh-5.jpg
+    alt: "placeholder image 3"
+    title: "Nguồn: fanpage *Một mảnh quốc học*"
   - url: /assets/images/gallery/qhh-3.jpg
     image_path: /assets/images/gallery/qhh-3.jpg
     alt: "placeholder image 3"
     title: ""
+  
+  - url: /assets/images/gallery/qhh-2.jpg
+    image_path: /assets/images/gallery/qhh-2.jpg
+    alt: "placeholder image 3"
+    title: ""
+  - url: /assets/images/gallery/qhh-4.jpg
+    image_path: /assets/images/gallery/qhh-4.jpg
+    alt: "placeholder image 3"
+    title: "Nguồn: fanpage *Một mảnh quốc học*"
 
+  - url: /assets/images/gallery/qhh-6.jpg
+    image_path: /assets/images/gallery/qhh-6.jpg
+    alt: "placeholder image 3"
+    title: "cửa sổ lớp"
+
+gallery12Tin:
+  - url: /assets/images/gallery/qhh-12tin.jpg
+    image_path: /assets/images/gallery/qhh-12tin.jpg
+    alt: "placeholder image 3"
+    title: "cửa sổ lớp"
+  
+  - url: /assets/images/gallery/qhh-12tinprom.jpg
+    image_path: /assets/images/gallery/qhh-12tinprom.jpg
+    alt: "placeholder image 3"
+    title: "cửa sổ lớp"
+  
+  - url: /assets/images/gallery/qhh-12tintrucban.jpg
+    image_path: /assets/images/gallery/qhh-12tintrucban.jpg
+    alt: "placeholder image 3"
+    title: "cửa sổ lớp"
 ---
 {% include feature_row %}
 
@@ -63,6 +92,8 @@ galleryQHH:
 Nơi lưu giữ nhiều kỉ niệm thời học sinh, nơi mình cố gắng rất nhiều ...
 
 {% include gallery id="galleryQHH"%}
+
+{% include gallery id="gallery12Tin" caption="Lớp cấp 3 của tôi" %}
 
 
 ## *[29-06-2021]* Chuyên mục ảnh này được tạo trên blog

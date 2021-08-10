@@ -2,8 +2,7 @@
 main:
   # - title: "Quick-Start Guide"
   #   url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-  - title: "Images" 
-    url: /gallery/
+  
   - title: "Posts"
     url: /year-archive/
   - title: "Categories"
@@ -12,5 +11,7 @@ main:
     url: /tags/
   # - title: "Pages"
   #   url: /page-archive/
+  - title: "Images" 
+    url: /gallery/
   - title: "About me" 
     url: /about/
