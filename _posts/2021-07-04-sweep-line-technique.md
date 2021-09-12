@@ -18,10 +18,12 @@ toc: true
 
 ## Độ dài đoạn phủ
 ### Bài toán:
-Cho *N* đoạn thẳng trên trục Ox, mỗi đoạn được biểu diễn bởi hai điểm đầu và cuối $$[a_i, b_i]$$  $$(a_i \le b_i) $$ 
+Cho *N* đoạn thẳng trên trục Ox, mỗi đoạn được biểu diễn bởi hai điểm đầu và cuối $$[a_i, b_i]$$  $$(a_i \le b_i) $$. Yêu cầu cho biết điểm có nhiều đoạn phủ lên nhất.
 
 ### Lời giải
 Đây là một trong những bài kinh điển và cơ bản nhất có thể sử dụng kỹ thuật Sweepline để giải một cách gọn gàng.
+
+Nhận thấy, điểm được phủ nhiều nhất có thể nằm ở các đầu mút.
 ### Cài đặt
 ```c++
 #include <iostream>

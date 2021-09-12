@@ -149,7 +149,38 @@ Comming soon...
 
 ## [02-02-2021] Du xuân Sài Gòn
 
+## [?-?-2021] Cầu ánh sao lần 2
+
 ## [01-01-2021] Đón năm mới
+> anggiao said
+
+Wow, lần đầu tiên trải nghiệm cảm giác 0h sáng ở ngoài đường, ngắm pháo bông đón chào năm mới nó như thế nào, mà còn đặc biệt hơn là ở bên cạnh bé ny và những người bạn.
+
+"I just wanna say goodbye 2020, and say hello 2021 with you"
+
+Ra đường từ sớm và về nhà từ sáng sớm (3h :>), có lẽ hôm nay mình thấy khá dài vì mình hoạt động từ sớm đến tận tối.
+
+Tối đến là lúc mà không gian riêng 2 đứa dành cho nhau, sau một hồi dụ dỗ thì bé hau cũng chịu đi uống trà sữa (thật ra là thèm chết mà ra giá đây mà :v)
+
+Tóm lại là hôm nay vui nguyên ngày <3
+
+> hauhau said
+
+**Khởi đầu một năm mới, bạn có gì?**
+
+Hôm đó tết Tây nà, hông hiểu sao nhưng mình lại thích ngày tết Tây hơn tết Ta nửa. Là sự vội vàng chuyển giao sang năm mới, nhưng cũng rộng lượng thêm chút thời gian để kết thúc năm cũ - đây có lẽ là một trong những lý do mình thích nó. Nếu như ở Đà Lạt, ngày này vốn đỗi rất bình thường. Có lẽ do sự ảm đạm và bình dị của nơi này. Còn khi ở Sài Thành, đó lại là một ngày rất ý nghĩa như cái tên của nó - Countdown. Đặc biệt hơn cả, cái Tết này, mình và anh dành trọn thời gian cho nhau. Hì..., trí nhớ mình có hạn, nhưng cũng nhớ mấy cái quan trọng à nha ^^, có thiếu sót thì đã có anh bonus thêm ha. Hôm đó, mọi người trong team của anh đã lên kế hoạch cho ngày này từ trước, mình chỉ là người tham dự thôi, hông phải tính gì hết nên vúi vùi vuiii liền. Thời điểm này làm người yêu của nhau chưa được 1 tháng, nên công cuộc chọn đồ cũng khá vất vả. Kiểu bối rối:" mặc gì đây ta? mặc sao cho đẹp bây giờ nhỉ, mặc quần đùi đi tối hông được, mà mặc quần dài áo polo, m đi học hả hau?" haha n cái suy nghĩ và sự tư vấn đến khó hiểu của bạn cùng phòng, giờ ngẫm lại thì nó lại đúng. Một 1 chiếc đầm đã được bỏ vào balo, đó cũng là lần đầu tiên anh thấy mình mặc đầm hihi. Hông biết nghĩ gì nơi, để nào hỏi thử ha 😄.
+
+Sẵn sàng hết, gogo thôi, bỏ lại chị em cùng phòng mà hông chút luyến tiếc. Lên đến Gigamall, quẹo trái xong quẹo phải là sẽ tới, vậy mà cũng bị lạc cho được. Do đi mới chỉ 1 2 lần, lạc cũng phải, chui lộn hẻm thôi nha, lúc đó gọi, mà người ta bận chiên rồi, may sao team cũng có người nghe máy. Đến nơi, sau đó còn được mlem mấy món quá đỉnh như: gà luộc bóp gỏi hoàng gia, bò chui lá lốt cung đình hay cháo hết xảy bà bay. Ta nói hông thể quên được mấy cái tên này luôn 😛. Ăn xong, tươm tất, mọi người cùng nhau đi xem pháo hoa, ngày hôm đó đông lắm, nên phải để xe khá xa lun. Hình như ông trời tính cả rồi, đi xa vậy mới có cơ hội nắm tay dạo bước nè, tâm sự thêm chút nữa nè. Đến nơi vẫn chưa đến 12h, mọi người đến một khu đất trống, ngồi đợi khoảnh khắc chuyển giao. Chỗ này cũng tuyệt kaka hông ai chen lấn, thấy được hai chỗ bắn pháo hoa luôn bên hầm Thủ Thiêm với cả Landmark. Cũng tranh thủ chụp vài pic, và nói với nhau đôi lời. Giờ lành đã đến, cảm giác đó khó tả lắm, bắt đầu một năm mới cùng người ấy, và mình cũng hiểu rằng khoảng thời gian này chỉ đến một lần trong năm với cả hai đứa. Pháo hoa cũng tầm 15 phút, tụi mình cũng đã nói với những gì muốn nói 🥰 Hạnh phúc chỉ biết double lên thôi 😘
+
+Trong lúc tản bộ về nơi lấy xe, team cũng dừng lại, tâm sự chung với nhau đôi điều về mục tiêu trong năm của mỗi người, và mong muốn trong năm mới sẽ đạt được gì, chia sẻ cùng nhau. Cũng gần 2h sáng rồi, đi lấy xe thôi. Về đến nhà, cũng chưa đi ngủ, chơi Bang tý nữa rồi mới chịu chui dô ngủ hihi. Thật lần đầu thức đến vậy, đi qua đêm, không cần phải nghĩ hay lo bất cứ vấn đề gì của ngày hôm sau. Ngủ 1 phát tới 9h, ăn sáng xong ngồi tý coi Đom đóm của Jack, lại chui dô ngủ tiếp tới chiều luôn, đầu năm mà sống heo thì tý ha. Đến 5h chiều, mình chỉ nghĩ sẽ đi về ký túc xá và chuẩn bị cho các môn trong tuần. Anh đề xuất đi ăn bún đậu quán gần đó, ngon lắm luôn làm nhẹ một combo ha. Nhưng có thêm chiếc ly trà sữa chắc sẽ mlem lắm đó 😋. Sau đó phải thuyết phục anh, nói vậy thôi chớ cũng dễ kaka sao mà từ chối được. Vào 1 quán trà sữa, cùng nhau đăng những tấm hình, set up ảnh cặp nửa nè, à còn cùng nhau chơi snapchat 🐶, những tấm hình selfie đầu tiên. Đây cũng là buổi hẹn hò đầu tiên đối với anh, còn mình lại nghĩ đó là hôm lên Cầu Ánh Sao lần 2. Ton ton đi về, kết thúc một ngày rất ý nghĩa, rất trọn vẹn và rất rất đầu tiên nửa.
+
+*Khởi đầu một năm của mình thế đó, vậy thôi hông muốn gì nhiều, chỉ cần cùng nhau là được 👩‍❤️‍👨*
+
+
+
+## [??-12-2020] Cầu ánh sao
+
+
 
 ## ❤️ 19-12-2020 ❤️
 Nahh, này là ngày cực kì quan trọng nè.
