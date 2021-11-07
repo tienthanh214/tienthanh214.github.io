@@ -18,6 +18,7 @@ toc: true
 
 
 # Tài liệu
+
 ## Sách
 - [ ] Design Patterns: Elements of Reusable Object-Oriented Software
 - [ ] Head First Design Patterns
@@ -78,6 +79,7 @@ toc: true
 2. Interface
     - Tên class là chữ nghiêng 
     - Ký hiệu như một hình tròn
+    
 ## Relationships
 
 1. Inheritance (Generalization)
@@ -170,28 +172,84 @@ p.setWeapon(new Sword());
 ```
 Trong tương lai mình có thêm vũ khí Knife, chỉ việc kế thừa interface *Weapon* rồi implement nó. Sau đó Player chỉ việc dùng nó bằng cách gọi hàm ```setWeapon(new Knife())```. Có thể thấy sự phát triển của vũ khí không liên quan đến sự phát triển của nhân vật.
 
-![image-center](/assets/images/post/design_pattern/strategy.png){: .align-center}
+![image-center](/assets/images/post/design_pattern/strategy.PNG){: .align-center}
 
 
 ### Note
 Có thể sử dụng *anonymous class* để tạo ra object thay vì phải tạo ra thêm class.
 
 ## Decorator
+**Also known as**: *Wrapper*
+
+Gắn các trách nhiệm bổ sung cho một đối tượng một cách linh hoạt bằng cách để nó wrap trong một class khác cùng kế thừa một superclass. Cho phép một sự thay thế linh hoạt cho subclassing để mở rộng chức năng
+
+*(Attach additional responsibilities to an object dynamically. Decorators provide a
+flexible alternative to subclassing for extending functionality)*
+
 ### Problem
 Mình cần build app Text Editor, giả sử đã làm xong phần hiển thị văn bản thô sơ. Bây giờ mình muốn trang trí nó như thêm border, thêm scrollbar, blabla...
 
-Ok, bây giờ viết ra subclass Border, ScrollBar kế thừa PlainText, mỗi class sẽ trang trí như tên của nó.
+Ok với cách suy nghĩ inhertitance bình thường, bây giờ viết ra subclass Border, ScrollBar kế thừa PlainText, mỗi class sẽ trang trí như tên của nó.
 
-Vấn đề là giờ mình vừa muốn vẽ border vừa muốn thêm scrollbar, như vậy phải viết thêm class BorderScrollBar. Vấn đề sẽ không có gì nếu không có rất nhiều class trang trí khác nhau, với cách kế thừa thông thường này sẽ tạo ra rất nhiều class.
+Vấn đề là giờ mình vừa muốn vẽ border vừa muốn thêm scrollbar, như vậy phải viết thêm class BorderScrollBar. Vấn đề sẽ không có gì nếu không có rất nhiều class trang trí khác nhau, với cách kế thừa thông thường này sẽ tạo ra rất nhiều class (trang trí với 2 cái thì sẽ là tổ hợp chập 2, trang trí với 3 cái thì tổ hợp chập 3 của các loại trang trí).
+
+Vô cùng khó khăn khi thêm 1 class trang trí mới (lúc đó phải thêm lần lượt vào các tổ hợp trên kia), rồi lúc thay đổi method bên trong class nào đó thì phải thay đổi các class liên quan rất là khó bảo trì và nâng cấp.
 
 ### Solution
-**Transparent enclosure**:  wrap object class (abstract) này trong class khác và thêm tính năng, lúc này không cần quan tâm object là kiểu gì, và object này không biết nó đã được wrap, các method được dùng như thường giờ mở rộng thêm tính năng wrap class vừa thêm. 
+Ta có thể sử dụng các biến đối tượng để đặt trong class, và chúng kế thừa cùng một superclass
 
-wrap PlainText trong Border, trong Border chứa object PlainText như vậy chỉ cần delegate cho object đó tự vẽ ra văn bản thô sơ, rồi Border sẽ vẽ ra khung. Nếu muốn thêm scrollbar, wrap object (Border chứa object PlainText vừa tạo trên) vào ScroolBar, để object đó tự vẽ cái mà nó quản lý, ScroolBar chỉ việc vẽ thêm scrollbar vào. Nhờ tính đa hình, ta không cần quan tâm cụ thể object là Border hay PlainText hay gì gì cả, nó chỉ là một biến kiểu interface PlainText.
+**Transparent enclosure**:  wrap object class (abstract) này trong class khác và thêm tính năng, lúc này không cần quan tâm object là kiểu gì, và object này không biết nó đã được wrap, các method cũ được dùng như thường bây giờ mở rộng thêm tính năng wrap class vừa thêm. 
+
+Gọi *Glyph* là interface chung, và *Decorator* là class cha của các kiểu trang trí như ScrollBar hay Border. PlainText và *Decorator* cùng kế thừa *Glyph*. Như vậy tất cả các class này đều có chung interface *Glyph*. (mình phân tách ra PlainText 1 nhánh, Decorator 1 nhánh để phân biệt chức năng sau này dễ phát triển, muốn thêm loại trang trí thì kế thừa Decorator, ...)
+
+wrap PlainText trong Border, trong Border chứa object PlainText như vậy chỉ cần delegate cho object PlainText đó tự vẽ ra văn bản thô sơ, rồi Border sẽ vẽ ra khung. Nếu muốn thêm scrollbar, wrap object (Border chứa object PlainText vừa tạo trên) vào ScroolBar, để object đó tự vẽ cái mà nó quản lý, ScroolBar chỉ việc vẽ thêm scrollbar vào (hãy nghĩ đến Đệ quy). Nhờ tính đa hình, ta không cần quan tâm cụ thể object là Border hay PlainText hay gì gì cả, nó chỉ là một biến kiểu interface *Glyph*.
+
+Như vậy Decorator Pattern cho phép lồng các decorators một cách đệ quy, cho phép không giới hạn các chức năng thêm vào
 
 Ví dụ trong Java: BufferedReader -ᐅ InputStreamReader -ᐅ InputStream (abstract class). 
 
+![image-center](/assets/images/post/design_pattern/decorator_example.png){: .align-center}
 
+> Hình ảnh ví dụ cho class DarkRoast wrap trong Mocha wrap trong Whip (một ly DarkRoast kèm Mocha và Whip). *Nguồn*: Head First Design Pattern
+
+Dưới đây là đoạn code ý tưởng
+```java
+abstract class Decorator {
+    private Glyph component;
+    Decorator(Glyph component) {
+        this.component = component
+    }
+    void draw() {
+        component.draw(); // delegate
+    }
+}
+
+class Border extends Decorator {
+    public Border(Glyph component) {super(component);}
+
+    void draw() {
+        super.draw();
+        // implement draw border
+    }
+}
+
+class ScrollBar extends Decorator {
+    public ScrollBar(Glyph component) {super(component);}
+
+    void draw() {
+        super.draw();
+        // implement draw scrollbar
+    }
+}
+```
+
+Bây giờ, hãy thử tạo một PlainText có trang trí scrollbar và cả border
+```java
+Glyph stack = new PlainText();
+stack = new ScrollBar(stack);
+stack = new Border(stack);
+```
+![image-center](/assets/images/post/design_pattern/decorator.png){: .align-center}
 
 ## Abstract Factory
 **Also known as**: *Kit*
@@ -199,6 +257,7 @@ Ví dụ trong Java: BufferedReader -ᐅ InputStreamReader -ᐅ InputStream (abs
 Cung cấp một interface cho phép tạo ra các object liên quan nhau mà không cần quan tâm cụ thể concrete class của nó là gì
 
 *(Abstract Factory is a creational design pattern that lets you produce families of related objects without specifying their concrete classes)*
+
 
 ### Problem
 GUI cần hỗ trợ hiển thị trên nhiều platform, mỗi platform lại cần hiện một kiểu. Ví dụ trên Mac, Windows, Android, ...
