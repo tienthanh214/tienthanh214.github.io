@@ -2,6 +2,7 @@
 title: "Note: OOP Design Pattern"
 excerpt: "23 design pattern - GoF note"
 show_date: true
+last_modified_at: 2021-11-10T07:53:04-04:00
 tags:
   - java
   - OOP
