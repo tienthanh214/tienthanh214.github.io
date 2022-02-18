@@ -2,12 +2,13 @@
 title: "Note: OOP Design Pattern"
 excerpt: "23 design pattern - GoF note"
 show_date: true
+comments: true
 last_modified_at: 2021-11-10T07:53:04-04:00
 tags:
   - java
   - OOP
 categories:
-  - Programming language
+  - Design pattern
 toc: true
 ---
 
@@ -137,7 +138,7 @@ toc: true
 
 # Design Patterns
 ## Composition
-
+// todo
 
 ## Strategy
 **Also known as**: *Policy*
@@ -190,7 +191,7 @@ flexible alternative to subclassing for extending functionality)*
 ### Problem
 Mình cần build app Text Editor, giả sử đã làm xong phần hiển thị văn bản thô sơ. Bây giờ mình muốn trang trí nó như thêm border, thêm scrollbar, blabla...
 
-Ok với cách suy nghĩ inhertitance bình thường, bây giờ viết ra subclass Border, ScrollBar kế thừa PlainText, mỗi class sẽ trang trí như tên của nó.
+Ok với cách suy nghĩ inheritance bình thường, bây giờ viết ra subclass Border, ScrollBar kế thừa PlainText, mỗi class sẽ trang trí như tên của nó.
 
 Vấn đề là giờ mình vừa muốn vẽ border vừa muốn thêm scrollbar, như vậy phải viết thêm class BorderScrollBar. Vấn đề sẽ không có gì nếu không có rất nhiều class trang trí khác nhau, với cách kế thừa thông thường này sẽ tạo ra rất nhiều class (trang trí với 2 cái thì sẽ là tổ hợp chập 2, trang trí với 3 cái thì tổ hợp chập 3 của các loại trang trí).
 
@@ -271,7 +272,7 @@ Cách giải quyết là tạo một abstract class GUIFactory, có các subclas
 
 Thay vì với MỖI object phải if else dài dòng để tùy với platform nào để tạo ra object thuộc class nào:
 ```java
-Label lbl = new MacButton();  
+Label lbl = new MacLabel();  
 ```
 thì chỉ cần if else một lần ở lúc chọn Factory:
 ```java
@@ -282,12 +283,89 @@ Label lbl = guiFactory.createLabel();
 
 **Thắc mắc**: Abstract factory chỉ mới giải quyết được vấn đề tạo chung một factory tránh việc tạo object khó khăn, nhưng chưa tránh được việc tạo ra các concrete class với mỗi widget phải implement mỗi platform một subclass riêng. Để giải quyết -> Bridge pattern
 
+## Factory Method
+**Also known as**: *Virtual Constructure*
+
+Định nghĩa một interface để tạo object, nhưng để cho các lớp con quyết định lớp cụ thể nào sẽ được tạo ra. Giao việc khởi tạo một đối tượng cụ thể cho lớp con.
+
+*(Define an interface for creating an object, but let subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses)*
+
+### Problem
+Làm thế nào mà Microsoft Word hay Android Studio có thể tạo ra những template với nội dung có sẵn theo yêu cầu của người dùng. Word khi New một document thì ở trang New, người dùng sẽ được gợi ý một số template có sẵn như Blank, Cover letter, Report, Certificate, ... ta chỉ việc chọn vào mẫu đó và như vậy là một document đã được tạo ra theo mẫu định sẵn của Word.
+
+Trang New chỉ có nhiệm vụ quản lý các template document (hiển thị các template cho người dùng chọn, tạo ra template theo yêu cầu nếu người dùng click vào đó). Mỗi template sẽ được tạo theo cách riêng khác nhau, và tất nhiên khi code trang New (gọi là class *Application*) mình chỉ biết quá trình chung tạo ra document (tuỳ vào người dùng chọn template nào, load, hiển thị nó lên màn hình, ....), chứ không biết một template được tạo ra, cài đặt cụ thể như thế nào.
+
+Application cũng không thể đoán được người dùng sẽ chọn template nào để tạo ra trước, nó chỉ biết khi nào cần tạo ra document và loại template document nào sẽ được tạo ra (sau khi người dùng click chọn vào template đó).
+
+Vấn đề đặt ra là ở Application, làm sao có thể tạo ra template document theo ý người dùng, khi mà chỉ biết về interface (hoặc abstract class) của các template. Gọi interface chung của các template là *Document*.
+
+### Solution
+Tạo một abstract method *createDocument()* ở class Document. Còn việc tạo ra template document nào thì uỷ thác cho class con kế thừa nó làm, hàm này được gọi là *factory method*.
+
+Quá trình tạo mới document theo template sẽ được cài đặt trong method newDocument() như sau:
+
+```java
+abstract class Application {
+    // factory method
+    abstract Document createDocument();
+    
+    public Document newDocument() {
+        Document document = createDocument();
+        // prepare, load and show document on screen
+        document.load();
+        document.show();
+        return document;
+    }
+}
+```
+
+Concrete class BlankApplication kế thừa Application sẽ cài đặt factory method *createDocument()* trả về cụ thể object blank template document là văn bản trống
+
+``` java
+class BlankApplication extends Application {
+    Document createDocument() {
+        return new BlankDocument();
+    }
+}
+```
+Tương tự để tạo một template Report:
+```java
+class ReportApplication extends Application {
+    Document createDocument() {
+        return new ReportDocument();
+    }
+}
+```
+Trong quá trình phát triển phần mềm, khi có thêm một template document mới thì chỉ việc thêm class tương ứng vào, như vậy không ảnh hưởng đến các class cũ đã được cài đặt và kiểm thử trước đó.
+
+![image-center](/assets/images/post/design_pattern/factorymethod.png){: .align-center}
+> Class diagram cho Factory Method tổng quát (*parallel class hierarchies* Product và Creator)
+
+Có thể bạn sẽ thấy mỗi concrete class chỉ cài hàm *createDocument* có một dòng khá là phí, trên đây chỉ là một ví dụ để thể hiện ý nghĩa của Factory Method là giao việc khởi tạo lại object cụ thể cho class con, ta chỉ cần dùng interface (hay abstract class) giúp loại bỏ sự ràng buộc của các lớp cụ thể vào code, giảm phụ thuộc tăng tính mở rộng, che giấu được việc khởi tạo object, chỉ cần tương tác với interface (hoặc abstract class). Sử dụng Factory Method như một chuẩn để khởi tạo object
+
+Ta cũng có thể làm như sau:
+```java
+class MyApplication extends Application {
+    Document createDocument(DocumentType type) {
+        switch (type) {
+            case DocumentType.BLANK:
+                return new BlankDocument();
+            case DocumentType.REPORT:
+                return new ReportDocument();
+            default:
+                return new CertificateDocument(); 
+        }
+    }
+}
+```
+Phiên bản này được gọi là *Parameterized Factory Method* (theo GoF) khi có truyền tham số vào cho factory method, qua đó cho thấy Factory Method rất linh động.
+
 ## Bridge
 
 ### Problem
 Ứng dụng đọc và hiển thị nhiều loại ảnh lên màn hình, ứng dụng còn phải tương thích, hỗ trợ trên nhiều hệ điều hành khác nhau.
 
-Có rất nhiều file image khác nhau như JPG, PNG, BMP, TIFF, GIF - mỗi loại image đều có một cấu trúc riêng nên cách read cũng khác nhau. Ứng dụng cần hỗ trợ trên các hệ điều hành như Windows, Mac, Linux. Theo tư duy kế thừa thông thường, mình cần phải viết với mỗi loại image thì phải viết 3 concrete class hỗ trợ hiển thị trên từng OS, kiểu như; JPGWindow, PNGWindow, BMPWindow, ..., JPGMac, ... như vậy nó sẽ tăng theo cấp số nhân rất là nhiều subclass phải tạo ra.
+Có rất nhiều loại file image khác nhau như JPG, PNG, BMP, TIFF, GIF - mỗi loại image đều có một cấu trúc riêng nên cách read cũng khác nhau. Ứng dụng cần hỗ trợ trên các hệ điều hành như Windows, Mac, Linux. Theo tư duy kế thừa thông thường, mình cần phải viết với mỗi loại image thì phải viết 3 concrete class hỗ trợ hiển thị trên từng OS, kiểu như; JPGWindow, PNGWindow, BMPWindow, ..., JPGMac, ... như vậy nó sẽ tăng theo cấp số nhân rất là nhiều subclass phải tạo ra.
 
 ### Solution
 
