@@ -2,7 +2,7 @@
 title: "Note: OOP Design Pattern"
 excerpt: "23 design pattern - GoF note"
 show_date: true
-last_modified_at: 2022-02-18T07:53:04-04:00
+last_modified_at: 2022-02-27T08:53:04-04:00
 tags:
   - java
   - OOP
@@ -255,7 +255,7 @@ stack = new Border(stack);
 ## Abstract Factory
 **Also known as**: *Kit*
 
-Cung cấp một interface cho phép tạo ra các object liên quan nhau mà không cần quan tâm cụ thể concrete class của nó là gì
+Cung cấp một interface cho phép tạo ra các object liên quan nhau mà không cần quan tâm cụ thể concrete class của nó là gì. Có thể gọi là Factory của các Factory
 
 *(Abstract Factory is a creational design pattern that lets you produce families of related objects without specifying their concrete classes)*
 
@@ -279,6 +279,11 @@ GUIFactory guiFactory = new MacFactory();
 // then
 Label lbl = guiFactory.createLabel();
 ```
+
+![image-center](/assets/images/post/design_pattern/abstract_factory.png){: .align-center}
+
+
+Abstract factory cung cấp interface cho việc tạo ra một bộ sản phẩm (ví dụ như label, button, ...), từ đây tạo được một hoặc nhiều concrete factories sản xuất cùng một sản phẩm nhưng với cách triển khai (cài đặt) khác nhau. Do đó client chỉ cần tương tác thông qua interface của factory hoặc product. Và vì patern này được sử dụng để tạo toàn bộ sản phẩm nên khi thêm sản phẩm mới thì phải thay đổi interface dẫn đến các lớp con thay đổi theo (khác với Factory method chỉ tạo 1 sản phẩm)
 
 **Thắc mắc**: Abstract factory chỉ mới giải quyết được vấn đề tạo chung một factory tránh việc tạo object khó khăn, nhưng chưa tránh được việc tạo ra các concrete class với mỗi widget phải implement mỗi platform một subclass riêng. Để giải quyết -> Bridge pattern
 
