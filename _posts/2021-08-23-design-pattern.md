@@ -364,6 +364,64 @@ class MyApplication extends Application {
 ```
 Phiên bản này được gọi là *Parameterized Factory Method* (theo GoF) khi có truyền tham số vào cho factory method, qua đó cho thấy Factory Method rất linh động.
 
+## Singleton
+Singlethon pattern đảm bảo lớp chỉ có thể tạo ra một instance duy nhất và cung cấp một điểm truy cập toàn cục đến nó.
+
+*Ensure a class only has one instance, and provide a global point of access to it*
+
+### Problem
+Một số ứng dụng cần tạo ra chính xác một instance, ví dụ như những tài nguyên dùng chung như database để truy xuất, theo dõi trạng thái trong quá trình sử dụng. Hoặc ta cần quản lý số lượng tài nguyên bị giới hạn, ví dụ trong game nào đó, mỗi người chơi chỉ sở hữu duy nhất 1 loại nhân vật, làm thế nào để ngân chặn người chơi sỡ hữu nhiều hơn 1 nhân vật.
+
+### Solution
+Ta cần ngăn chặn việc tạo ra instance tự do, không cho *new* ra một đối tượng. Để ngăn chặn tạo ra object ta chỉ cần cho phương phức khởi tạo constructor là **private**.
+
+Bây giờ, ta không thể tự tạo ra object ở ngoài class, bên trong class chính là nơi duy nhất có thể sử dụng *private constructor* này. Tạo một *static method* cho phép tạo instance của class, vì ở bên ngoài class không thể tạo ra object, vì vậy để tạo instance ta cần sử dụng *static method*
+
+Cuối cùng ta cần một biến để lưu lại instance được tạo ra bằng cách sử dụng một static attribute *_instance*
+
+```java
+class Singleton {
+    private static Singleton _instance = null;
+    private Singleton() {}
+    public static Singleton getInstance() {
+        if (_instance == null) 
+            _instance = new Singleton();
+        return _instance;
+    }
+}
+```
+### Note
+Phiên bản Singleton Pattern được cài đặt ở trên được gọi là Lazy Initialization chỉ khởi tạo khi cần thiết, ngoài ra còn có một số biến thể khác. 
+
+Mẫu Singleton đảm bảo chỉ cho phép tạo ra tối đa một instance, tuy nhiên trong môi trường multithread, với cách cài đặt đơn giản trên không đảm bảo rằng duy nhất một instance được tạo ra, giá trị của biến static *_instance* có thể sẽ nhận qua các giá trị khác nhau khi có nhiều thread gọi hàm *getInstance()* cùng một lúc. Cách giải quyết trong Java là sử dụng từ khoá **synchronized** để đồng bộ, chỉ cho phép 1 thread duy nhất vào hàm tại một thời điểm.
+```java
+public static synchronized Singleton getInstance() {
+    if (_instance == null) 
+        _instance = new Singleton();
+    return _instance;
+}
+```
+> Thread-safe Singleton
+
+Tuy nhiên phương pháp đồng bộ trên là tốn kém, thật ra ta chỉ cần bật đồng bộ hoá ở lần khởi tạo đầu tiên, ở những lần *getInstance()* sau thì câu lệnh *if* luôn trả về false rồi. 
+
+```java
+class Singleton {
+    private volatile static Singleton _instance; // volatile đọc từ bộ nhớ chính chứ không phải từ cache
+    private Singleton() {}
+    public static Singleton getInstance() {
+        if (_instance == null) {
+            synchronized (Singleton.class) {
+                if (_instance == null) {
+                    _instance = new Singleton();
+                }
+            }
+        }
+        return _instance;
+    }
+}
+```
+> Double-checked locking Singleton
 ## Bridge
 
 ### Problem
@@ -495,7 +553,7 @@ Một nhà xuất bản báo (publisher/subject) bắt đầu kinh doanh, ta (su
 Hoặc ví dụ về biểu đồ, cùng một data có thể biểu diễn dưới nhiều dạng biểu đồ khác nhau như biểu đồ hình cột, tròn, đường, .... Mỗi biểu đồ có một cách thể hiện khác nhau, nhưng dữ liệu là từ một nguồn.
 
 ### Solve
-Tạo interface Subject thể hiện cho đối tượng dữ liệu, và interface Observer thể hiện những cái quan sát dữ liệu.
+Tạo interface Subject thể hiện cho đối tượng dữ liệu, và interface Observer thể hiện những đối tượng quan sát dữ liệu.
 
 Trong Subject sẽ chứa một List các observer cần nhận dữ liệu từ nó, cùng các hàm addObserver, removeObserver, và notifyObservers để thông báo thay đổi. Vì các observers có chung interface nên nó có kiểu cụ thể là gì cũng được (miễn là chung interface) nên dễ dàng lưu nó trong mảng Observer[] cùng một vòng for để thông báo cho tất cả bằng cách gọi hàm update của observer.
 
