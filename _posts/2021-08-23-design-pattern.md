@@ -422,6 +422,22 @@ class Singleton {
 }
 ```
 > Double-checked locking Singleton
+
+Một phương pháp khác thường được sử dụng để cài đặt (và được cho là ổn định nhất) là **Bill Pugh Singleton**, sử dụng một *helper inner class*, khi class Singleton được load lên bộ nhớ thì class SingletonHelper vẫn chưa được load, chỉ khi có lời gọi lần đầU đến từ *getInstance()* method nó mới được load và tạo ra instance Singleton
+
+
+```java
+class BillPughSingleton {
+    private BillPughSingleton() {}
+     private static class SingletonHelper {
+        private static final BillPughSingleton _instance = new BillPughSingleton();
+    }
+    public static BillPughSingleton getInstance() {
+        return SingletonHelper._instance;
+    }
+}
+```
+
 ## Bridge
 
 ### Problem
