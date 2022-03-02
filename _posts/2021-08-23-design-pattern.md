@@ -373,7 +373,7 @@ Singlethon pattern đảm bảo lớp chỉ có thể tạo ra một instance du
 *Ensure a class only has one instance, and provide a global point of access to it*
 
 ### Problem
-Một số ứng dụng cần tạo ra chính xác một instance, ví dụ như những tài nguyên dùng chung như database để truy xuất, theo dõi trạng thái trong quá trình sử dụng. Hoặc ta cần quản lý số lượng tài nguyên bị giới hạn, ví dụ trong game nào đó, mỗi người chơi chỉ sở hữu duy nhất 1 loại nhân vật, làm thế nào để ngân chặn người chơi sỡ hữu nhiều hơn 1 nhân vật.
+Một số ứng dụng cần tạo ra chính xác một instance, ví dụ như những tài nguyên dùng chung như database để truy xuất, theo dõi trạng thái trong quá trình sử dụng. Hoặc ta cần quản lý số lượng tài nguyên bị giới hạn, ví dụ trong game nào đó, mỗi người chơi chỉ sở hữu duy nhất 1 loại nhân vật, làm thế nào để nhăn chặn người chơi sỡ hữu nhiều hơn 1 nhân vật.
 
 ### Solution
 Ta cần ngăn chặn việc tạo ra instance tự do, không cho *new* ra một đối tượng. Để ngăn chặn tạo ra object ta chỉ cần cho phương phức khởi tạo constructor là **private**.
@@ -406,7 +406,7 @@ public static synchronized Singleton getInstance() {
 ```
 > Thread-safe Singleton
 
-Tuy nhiên phương pháp đồng bộ trên là tốn kém, thật ra ta chỉ cần bật đồng bộ hoá ở lần khởi tạo đầu tiên, ở những lần *getInstance()* sau thì câu lệnh *if* luôn trả về false rồi. 
+Tuy nhiên phương pháp đồng bộ trên là tốn kém (performance giảm 100 lần theo sách *Head First Design Pattern*), thật ra ta chỉ cần bật đồng bộ hoá ở lần khởi tạo đầu tiên, ở những lần *getInstance()* sau thì câu lệnh *if* luôn trả về false rồi. 
 
 ```java
 class Singleton {
@@ -426,7 +426,7 @@ class Singleton {
 ```
 > Double-checked locking Singleton
 
-Một phương pháp khác thường được sử dụng để cài đặt (và được cho là ổn định nhất) là **Bill Pugh Singleton**, sử dụng một *helper inner class*, khi class Singleton được load lên bộ nhớ thì class SingletonHelper vẫn chưa được load, chỉ khi có lời gọi lần đầU đến từ *getInstance()* method nó mới được load và tạo ra instance Singleton
+Một phương pháp khác thường được sử dụng để cài đặt (và được cho là tốt nhất) là **Bill Pugh Singleton**, sử dụng một *helper inner class*, khi class Singleton được load lên bộ nhớ thì class SingletonHelper vẫn chưa được load, chỉ khi có lời gọi lần đầU đến từ *getInstance()* method nó mới được load và tạo ra instance Singleton
 
 
 ```java
