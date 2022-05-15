@@ -368,9 +368,9 @@ class MyApplication extends Application {
 Phiên bản này được gọi là *Parameterized Factory Method* (theo GoF) khi có truyền tham số vào cho factory method, qua đó cho thấy Factory Method rất linh động.
 
 ## Singleton
-Singlethon pattern đảm bảo lớp chỉ có thể tạo ra một instance duy nhất và cung cấp một điểm truy cập toàn cục đến nó.
+Singleton pattern đảm bảo lớp chỉ có thể tạo ra một instance duy nhất và cung cấp một điểm truy cập toàn cục đến nó.
 
-*Ensure a class only has one instance, and provide a global point of access to it*
+*(Ensure a class only has one instance, and provide a global point of access to it)*
 
 ### Problem
 Một số ứng dụng cần tạo ra chính xác một instance, ví dụ như những tài nguyên dùng chung như database để truy xuất, theo dõi trạng thái trong quá trình sử dụng. Hoặc ta cần quản lý số lượng tài nguyên bị giới hạn, ví dụ trong game nào đó, mỗi người chơi chỉ sở hữu duy nhất 1 loại nhân vật, làm thế nào để nhăn chặn người chơi sỡ hữu nhiều hơn 1 nhân vật.
@@ -454,6 +454,12 @@ Phân tách abstraction và implementation ra 2 class riêng.
 Lớp abstract giữ object reference đến class implement, lúc đó chỉ cần delegate cho class implement làm việc.
 
 ## Command 
+
+Đóng gói yêu cầu thành một đối tượng, có thể được sử dụng để tham số hoá các đối tượng với các yêu cầu khác nhau, và có thể hỗ trợ thao tác undo. Giống như lớp trung gian được tạo ra để lưu trữ các command và trạng thái của object tại thời điểm nào đó.
+
+*(Encapsulate a request as an object, thereby letting you parameterize clients with
+different requests, queue or log requests, and support undoable operations.)*
+
 ### Problem
 Mình muốn tạo ra một Text Editor hỗ trợ các chức năng như Copy, Paste, Open, Save, Undo, Redo, ... cho phép người dùng click vào button của chức năng trên toolbar để sử dụng chức năng đó. 
 
@@ -465,9 +471,13 @@ Nếu hard-code mỗi class khác nhau nhưng đều thực hiện cùng một c
 ### Solution
 Hãy đóng gói chức năng đó vào trong class. Thay vì request trực tiếp, thì hãy thông qua trung gian Command object. ....
 
-Ném request đóng gói trong Command object để object này rồi delegate cho server làm điều mà nó phải làm. Như bồi bàn nhận đơn từ khách hàng sau đó đưa cho đầu bếp và bảo ông nấu đi.
+Gửi request đóng gói trong Command object rồi delegate cho server làm điều mà nó phải làm. Như bồi bàn (invoker) nhận đơn (command) từ khách hàng (client) sau đó đưa cho đầu bếp (receiver) và bảo ông nấu đi, bồi bàn không hề biết về cách chế biến món ăn, bồi bản chỉ gửi yêu cầu món ăn nhận từ khách hàng và đầu bếp mới là người thực hiện món ăn đó, bồi bàn có thể nhận đa dạng nhiều loại đơn hàng từ các khách hàng.
 
-Dùng abstract class chung cho subclass chức năng nữa, giúp linh động khi dùng cùng một interface nhưng lại có thể handle các request khác nhau. Trong tương lai dễ bảo trì nâng cấp.
+Mọi đơn hàng tuy khác nhau nhưng được đóng gói và đều có chung interface **Command** sở hữu method *execute()*, bồi bàn (hay invoker) không cần quan tâm gì nhiều ngoài việc gọi hàm *execute()*, delegate cho đầu bếp (hay receiver) sẽ thực hiện yêu cầu.
+
+Dùng abstract class chung cho subclass chức năng, giúp linh động khi dùng cùng một interface nhưng lại có thể handle các request khác nhau. Trong tương lai dễ bảo trì nâng cấp.
+
+Để cài đặt tính năng undo/redo, Command class cần thêm method *undo()* và lưu lại trạng thái trước, một cách khác là cài đặt một lớp sử dụng cấu trúc dữ liệu như queue, stack, deque, ... để lưu các command đã thực hiện
 
 
 ## Iterator

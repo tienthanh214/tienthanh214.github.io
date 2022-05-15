@@ -19,13 +19,13 @@ toc: true
 ## WELCOME TO MY BLOG
 
 ## General Information
-- My name is Tien Thanh, a Software Engineer student
+- My name is Tien Thanh, a Software Engineering student
 - I'm studying at Ho Chi Minh City University of Science - VNU. 
 - I'm interested in software development, computer science, competitive programming, US/UK music, ... 
 
 ## Purpose of this blog
-- 💻 I hope to sharing a little of my knowledge for everybody who interested in programming.
-- 🎧 Where I'm tell about my life as a programmer and morever. 
+- 💻 I hope to share a little of my knowledge for everybody who interested in programming.
+- 🎧 Where I'm tell about my life as a programmer and more. 
 - 😃 And ... I need a place to write and share my feeling (just for myself) 
 
 ---

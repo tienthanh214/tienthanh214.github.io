@@ -1,5 +1,5 @@
 ---
-title: "Write-up: Hackathon Android Midterm"
+title: "Hackathon Android Midterm"
 excerpt: "Vui viết chút về 3 ngày hackathon làm mini project giữa kì môn android"
 show_date: true
 tags:
